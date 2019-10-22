@@ -1,21 +1,13 @@
 import React from 'react';
 import './App.css';
-import Button from './components/button';
+import CounterWithReduxState from './components/counter/counterWithReduxState';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {number: 0};
-  }
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Button buttonApi={this.state}/>
-        </header>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <CounterWithReduxState />
+    </div>
+  )
 }
 
 export default App;
